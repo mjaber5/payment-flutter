@@ -1,23 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:payment_flutter/home.dart';
+import 'package:payment_flutter/features/checkout/presentation/views/my_cart_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const CheckoutApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CheckoutApp extends StatelessWidget {
+  const CheckoutApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 255, 0, 0),
-        ),
-        useMaterial3: true,
-      ),
-      home: const Home(),
+    return const MaterialApp(
+      home: MyCartView(),
     );
   }
 }
