@@ -13,7 +13,7 @@ class MyCartView extends StatelessWidget {
         leading: Center(
           child: SvgPicture.asset(
             'assets/images/ArrowBack.svg',
-            height: 24,
+            height: 20,
           ),
         ),
         elevation: 0,

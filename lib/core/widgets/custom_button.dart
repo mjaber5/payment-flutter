@@ -19,11 +19,11 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
         ),
-        child: const Center(
+        child: Center(
           child: Text(
             'Complete Payment',
             textAlign: TextAlign.center,
-            style: Styles.style22,
+            style: Styles.style20,
           ),
         ),
       ),
