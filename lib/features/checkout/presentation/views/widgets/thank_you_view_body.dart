@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:payment_flutter/features/checkout/presentation/views/widgets/custom_check_item.dart';
+import 'package:payment_flutter/features/checkout/presentation/views/widgets/custom_dashed_line.dart';
+import 'package:payment_flutter/features/checkout/presentation/views/widgets/thank_you_card.dart';
 
 class ThankYouViewBody extends StatelessWidget {
   const ThankYouViewBody({super.key});
@@ -10,13 +13,12 @@ class ThankYouViewBody extends StatelessWidget {
       child: Stack(
         clipBehavior: Clip.none,
         children: [
-          Container(
-            decoration: ShapeDecoration(
-              color: const Color(0xFFD9D9D9),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-            ),
+          const ThankYouCard(),
+          Positioned(
+            left: 20 + 4,
+            right: 20 + 4,
+            bottom: MediaQuery.sizeOf(context).height * 0.2 + 20,
+            child: const CustomDashedLine(),
           ),
           Positioned(
             left: -20,
@@ -36,19 +38,7 @@ class ThankYouViewBody extends StatelessWidget {
             top: -50,
             left: 0,
             right: 0,
-            child: CircleAvatar(
-              radius: 50,
-              backgroundColor: Color(0xFFD9D9D9),
-              child: CircleAvatar(
-                radius: 40,
-                backgroundColor: Color(0xff34A853),
-                child: Icon(
-                  Icons.check,
-                  color: Colors.white,
-                  size: 50,
-                ),
-              ),
-            ),
+            child: CustomCheckItem(),
           )
         ],
       ),
