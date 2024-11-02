@@ -3,9 +3,15 @@ import 'package:payment_flutter/core/widgets/custom_button.dart';
 import 'package:payment_flutter/features/checkout/presentation/views/widgets/custom_credit_card.dart';
 import 'package:payment_flutter/features/checkout/presentation/views/widgets/payment_methods_list_view.dart';
 
-class PaymentDetailsViewBody extends StatelessWidget {
+class PaymentDetailsViewBody extends StatefulWidget {
   const PaymentDetailsViewBody({super.key});
 
+  @override
+  State<PaymentDetailsViewBody> createState() => _PaymentDetailsViewBodyState();
+}
+
+class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
+  GlobalKey<FormState> formKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -13,8 +19,8 @@ class PaymentDetailsViewBody extends StatelessWidget {
         const SliverToBoxAdapter(
           child: PaymentMethodsListView(),
         ),
-        const SliverToBoxAdapter(
-          child: CustomCreditCard(),
+        SliverToBoxAdapter(
+          child: CustomCreditCard(formKey: formKey),
         ),
         SliverFillRemaining(
           hasScrollBody: false,
@@ -24,7 +30,9 @@ class PaymentDetailsViewBody extends StatelessWidget {
               padding: EdgeInsets.only(
                 bottom: MediaQuery.of(context).size.height * 0.019,
               ),
-              child: const CustomButton(),
+              child: const CustomButton(
+                textTitle: 'Pay',
+              ),
             ),
           ),
         ),
