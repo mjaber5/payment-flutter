@@ -13,8 +13,14 @@ class CheckoutApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.white,
+        useMaterial3: true,
+        colorScheme: const ColorScheme.light(
+          onPrimary: Colors.black,
+          onSurface: Colors.black,
+        ),
+        scaffoldBackgroundColor: Colors.white,
       ),
+      themeMode: ThemeMode.light,
       home: const MyCartView(),
     );
   }
