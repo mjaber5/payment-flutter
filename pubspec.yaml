@@ -37,6 +37,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   flutter_credit_card: 
     path: android\flutter_credit_card-master\flutter_credit_card-master\
+  font_awesome_flutter: ^10.7.0
 
 dev_dependencies:
   flutter_test:

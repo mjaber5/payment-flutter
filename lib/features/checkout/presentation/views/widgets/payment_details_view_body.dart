@@ -51,11 +51,6 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
                   } else {
                     autovalidateMode = AutovalidateMode.always;
                     setState(() {});
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const ThankYouView(),
-                      ),
-                    );
                   }
                 },
                 textTitle: 'Pay',

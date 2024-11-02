@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:payment_flutter/core/util/styles.dart';
 
-AppBar buildAppBar(
-    {required final String title, final void Function()? onPressed}) {
+AppBar buildAppBar({final String? title, final void Function()? onPressed}) {
   return AppBar(
     leading: Center(
       child: IconButton(
@@ -18,7 +17,7 @@ AppBar buildAppBar(
     backgroundColor: Colors.transparent,
     centerTitle: true,
     title: Text(
-      title,
+      title ?? '',
       textAlign: TextAlign.center,
       style: Styles.style25,
     ),
