@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:payment_flutter/core/util/styles.dart';
 
 class BarCodeSection extends StatelessWidget {
@@ -12,10 +12,7 @@ class BarCodeSection extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Icon(
-          FontAwesomeIcons.barcode,
-          size: 70,
-        ),
+        SvgPicture.asset('assets/images/barcode.svg'),
         Container(
           width: 113,
           height: 58,
